@@ -25,7 +25,7 @@
 
 # 2.mindspore实现版本
 
-代码仓库：
+代码仓库：https://github.com/upupoo999/UniKP_mindspore.git
 
 ## 2.1 mindspore框架介绍
 
@@ -51,7 +51,7 @@ conda activate unikp
 克隆已经实现好的mindspore版本unikp代码：
 
 ```
-
+git clone https://github.com/upupoo999/UniKP_mindspore.git
 ```
 
 下载依赖包：
@@ -70,7 +70,13 @@ conda activate unikp
 
 ### 网络实现
 
+Unikp的架构如下图所示：
+
+![](./img/unikp_framework.png)
+
 ProtT5-XL-UniRef50模型使用mindnlp库仿照huggingface的transformers库加载。
+
+Extra tree模型使用sklearn库中模型。
 
 预训练的SMILES Transformer model的mindspore实现版本如下：
 
@@ -204,12 +210,26 @@ Pcc: 0.7711965447431852 RMSE: 1.0315118289532146 MAE: 0.6898741519153144 r2: 0.5
 
 一些论文中的复现图如下：
 
-average coefficient of determination (R2) value for UniKP after five rounds of random test set splitting.
+**average coefficient of determination (R2) value for UniKP after five rounds of random test set splitting**
 
-the root mean square error (RMSE) between experimentally measured $k_{cat}$ values and predicted $k_{cat}$ values of  UniKP for training and test sets.
+![](./metrics/r2_scores_boxplot.png)
 
-Scatter plot illustrating the Pearson coefficient correlation (PCC) between experimentally measured $k_{cat}$ values and predicted $k_{cat}$ values of UniKP for the test set, showing a strong linear correlation. The color gradient represents the density of data points, ranging from blue to red.
+**the root mean square error (RMSE) between experimentally measured $k_{cat}$ values and predicted $k_{cat}$ values of  UniKP for training and test sets.**
 
-$k_{cat}$ values and predicted $k_{cat}$ values of DLKcat and UniKP in various experimental $k_{cat}$ numerical intervals. 
+![](./metrics/rmse_histogram.png)
 
-UniKP markedly discriminates $k_{cat}$ values of enzymes and their mutants. Scatter plot illustrating the Pearson coefficient correlation (PCC) between experimentally measured $k_{cat}$ values and predicted $k_{cat}$ values of UniKP for wild type enzymes (a) and mutated enzymes (b). The color gradient  represents the density of data points, ranging from blue to red. (c) PCC values of wild-type and mutated enzymes on the test set of UniKP. 
+**Scatter plot illustrating the Pearson coefficient correlation (PCC) between experimentally measured $k_{cat}$ values and predicted $k_{cat}$ values of UniKP for the test set, showing a strong linear correlation. The color gradient represents the density of data points, ranging from blue to red.**
+
+![](./metrics/kcat_correlation_scatter_plot.png)
+
+**$k_{cat}$ values and predicted $k_{cat}$ values of DLKcat and UniKP in various experimental $k_{cat}$ numerical intervals.** 
+
+![](./metrics/rmse_numerical_intervals.png)
+
+**UniKP markedly discriminates $k_{cat}$ values of enzymes and their mutants. Scatter plot illustrating the Pearson coefficient correlation (PCC) between experimentally measured $k_{cat}$ values and predicted $k_{cat}$ values of UniKP for wild type enzymes (a) and mutated enzymes (b). The color gradient  represents the density of data points, ranging from blue to red. (c) PCC values of wild-type and mutated enzymes on the test set of UniKP.** 
+
+![](./metrics/wildtype_scatter_plot.png)
+
+![](./metrics/mutant_scatter_plot.png)
+
+![](./metrics/rmse_numerical_intervals.png)
