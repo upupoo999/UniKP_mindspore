@@ -232,4 +232,12 @@ Pcc: 0.7711965447431852 RMSE: 1.0315118289532146 MAE: 0.6898741519153144 r2: 0.5
 
 ![](./metrics/mutant_scatter_plot.png)
 
-![](./metrics/rmse_numerical_intervals.png)
+![](./metrics/kcat_correlation_scatter_ph_plot.png)
+
+
+
+![kcat_correlation_scatter_ph_plot](./metrics/kcat_correlation_scatter_tem_plot.png)
+
+![er_r2](./metrics/er_r2.png)
+
+![rmse_numerical_intervals_re](./metrics/rmse_numerical_intervals_re.png)
