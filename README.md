@@ -232,12 +232,18 @@ Pcc: 0.7711965447431852 RMSE: 1.0315118289532146 MAE: 0.6898741519153144 r2: 0.5
 
 ![](./metrics/mutant_scatter_plot.png)
 
+**Scatter plotillustrating the Pearson coefficient correlation (PCC) between experimentally measured $k_{cat}$ values and predicted $k_{cat}$ values of Revised UniKP for pH set (N=636) and temperature set (N=572). The color gradient represents the density of data points, ranging from blue (0.02) to red (0.28).** 
+
 ![](./metrics/kcat_correlation_scatter_ph_plot.png)
 
 
 
 ![kcat_correlation_scatter_ph_plot](./metrics/kcat_correlation_scatter_tem_plot.png)
 
+**Coefficient of determination (R2) values between experimentally measured kcat values and predicted kcat values on pH and temperature test sets of EF-UniKP, Revised UniKP.**
+
 ![er_r2](./metrics/er_r2.png)
+
+**Root mean square error (RMSE) between experimentally mea sured kcat values and predicted kcat values of 149 samples with kcat values higher than 4 (logarithm value) using various re-weighting methods and the initial UniKP.**
 
 ![rmse_numerical_intervals_re](./metrics/rmse_numerical_intervals_re.png)
